@@ -1,0 +1,71 @@
+.council {
+  padding: 20px 0;
+  clear: both;
+}
+
+.council-card {
+  text-align: center;
+  border-radius: 3px;
+  background: #fafafa;
+  margin: 20px 0;
+  padding: 20px 10px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.council-card-avatar {
+  border: 2px solid #e5e5e5;
+  height: 140px;
+  width: 140px;
+  max-width: 80%;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  transition: all .2s ease-in-out;
+  margin: 0 auto 20px;
+  overflow: hidden;
+}
+
+.council-card-avatar > img {
+  max-width: 100%;
+  min-width: 100%;
+  display: block;
+}
+
+.council-card-descr-name {
+  font-weight: bold;
+  color: #666666;
+  font-size: 0.9em;
+  line-height: 10px;
+  text-align: center;
+}
+
+.council-card-descr-position {
+  padding: 10px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.council-card-descr-position:before {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+  content: '';
+  height: 3px;
+  background: #09c;
+  margin-bottom: 20px;
+}
+
+.council-card:nth-child(2n+1) .council-card-avatar {
+  border-top-left-radius: 59%;
+  border-top-right-radius: 52%;
+  border-bottom-left-radius: 59%;
+  border-bottom-right-radius: 56%;
+  transform: rotate(-6deg);
+}
+
+.council-card:nth-child(2n+1) .council-card-avatar:hover {
+  border-top-left-radius: 51%;
+  border-top-right-radius: 67%;
+  border-bottom-left-radius: 64%;
+  border-bottom-right-radius: 56%;
+  transform: rotate(-4deg);
+}
