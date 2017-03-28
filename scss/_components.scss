@@ -1,11 +1,15 @@
+.employees {
+    width: $width;
+    margin: 0 auto;
+}
 .council {
-    padding: 20px 0;
-    clear: both;
+    padding: 0;
+    @include clearfix;
     &-card {
         text-align: center;
         border-radius: 3px;
         background: $bgc;
-        margin: 20px 0;
+        margin: 5px 0;
         padding: 20px 10px;
         box-shadow: 0 2px 3px rgba(0,0,0, .3);
         &-avatar {
@@ -49,3 +53,5 @@
     }
 }
 @include cicada($pclass, $chclass);
+@include grid($cols);
+

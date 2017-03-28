@@ -1,5 +1,18 @@
+.employees {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .council {
-  padding: 20px 0;
+  padding: 0;
+}
+
+.council:before, .council:after {
+  content: '';
+  display: table;
+}
+
+.council:after {
   clear: both;
 }
 
@@ -7,7 +20,7 @@
   text-align: center;
   border-radius: 3px;
   background: #fafafa;
-  margin: 20px 0;
+  margin: 5px 0;
   padding: 20px 10px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
@@ -68,4 +81,24 @@
   border-bottom-left-radius: 64%;
   border-bottom-right-radius: 56%;
   transform: rotate(-4deg);
+}
+
+.col-1 {
+  width: 25%;
+  float: left;
+}
+
+.col-2 {
+  width: 50%;
+  float: left;
+}
+
+.col-3 {
+  width: 75%;
+  float: left;
+}
+
+.col-4 {
+  width: 100%;
+  float: left;
 }
