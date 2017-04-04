@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var googlecdn = require('gulp-google-cdn');
 var clean = require('gulp-clean');
+var sourcemaps = require('gulp-sourcemaps');
 //gulp --tasks  - просмотр задач
 gulp.task('gcdn', function (done) { //задача по умолчанию может быть вызвана кл.сл.gulp
     return gulp.src('./index.html')
@@ -23,9 +24,11 @@ gulp.task('clean', function (done) {
  
 gulp.task('scss', gulp.series('clean', function (done) {
   return gulp.src('./scss/**/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'expanded'
   }).on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/css'));
     done();
     }));
