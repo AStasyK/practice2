@@ -27,8 +27,8 @@ gulp.task('scss', gulp.series('clean', function (done) {
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'expanded'
-  }).on('error', sass.logError))
-    .pipe(sourcemaps.write())
+	}).on('error', sass.logError))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css'));
     done();
     }));
@@ -37,3 +37,5 @@ gulp.task('scss', gulp.series('clean', function (done) {
 gulp.task('scss:watch', function () {
   gulp.watch('./scss/**/*.scss', gulp.series('scss', 'gcdn'));
 });
+
+gulp.task('dist', gulp.series('scss', 'gcdn'));;

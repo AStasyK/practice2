@@ -1,10 +1,48 @@
+html {
+	min-height: 100%;
+	position: relative;
+}
+body{
+	margin: 0;
+	margin-bottom: 50px;
+	padding: 0;
+	padding-bottom: 30px;
+}
+header{
+	margin-bottom:20px;
+}
+.navbar, .navbar-default {
+	background: $color;
+	height: 50px;
+	margin: 0;
+	border-radius:0;
+	border: 0;
+	border-bottom: 1px solid $brdc;
+}
+.banner {
+	height:500px;
+	background: $bgc url(../../img/banner.jpg) no-repeat left top; 
+	background-size: cover;
+}
+.footer {
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+	background: $color;
+	color: $bgc;
+	height: 50px;
+	padding: 15px;
+	margin-top:30px;
+}
 .employees {
     width: $width;
-    margin: 0 auto;
+    margin: 30px auto;
+	min-height: 500px;
+	@include clearfix;
 }
 .council {
     padding: 0;
-    @include clearfix;
+    /* @include clearfix; */
     &-card {
         text-align: center;
         border-radius: 3px;
